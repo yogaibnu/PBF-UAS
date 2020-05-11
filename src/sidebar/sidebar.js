@@ -18,10 +18,17 @@ class SiderbarComponent extends React.Component {
         const { notes, classes, selectedNoteIndex } = this.props;
 
         return (
-            <div>
-                Hello from the sidebar
+            <div className={classes.sidebarContainer}>
+                <Button
+                    onClick={this.newNoteBtnClick}
+                    className={classes.newNoteBtn}
+                >New Note</Button>
             </div>
-        )
+        );
+    }
+
+    newNoteBtnClick = () => {
+        console.log('NEW BTN CLIKCED');
     }
 }
 
