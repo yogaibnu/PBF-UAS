@@ -22,7 +22,7 @@ class SiderbarComponent extends React.Component {
                 <Button
                     onClick={this.newNoteBtnClick}
                     className={classes.newNoteBtn}
-                >New Note</Button>
+                >{this.state.addingNote ? 'Cancel' : 'New Note'}</Button>
                 {
                     this.state.addingNote ?
                     <div>
@@ -32,6 +32,10 @@ class SiderbarComponent extends React.Component {
                         placeholder='Enter note title'
                         onKeyUp={(e) => this.updateTitle(e.target.value)}>
                         </input>
+                        <Button
+                            className={classes.newNoteSubmitBtn}
+                            onClick={this.newNote}
+                        >Submit Note</Button>
                     </div> :
                     null
                 }
@@ -45,6 +49,10 @@ class SiderbarComponent extends React.Component {
 
     updateTitle = (txt) => {
         console.log('HERE IT IS: ', txt);
+    }
+
+    newNote = () => {
+        console.log(this.state);
     }
 }
 
