@@ -23,12 +23,28 @@ class SiderbarComponent extends React.Component {
                     onClick={this.newNoteBtnClick}
                     className={classes.newNoteBtn}
                 >New Note</Button>
+                {
+                    this.state.addingNote ?
+                    <div>
+                        <input
+                        type='text'
+                        className={classes.newNoteInput}
+                        placeholder='Enter note title'
+                        onKeyUp={(e) => this.updateTitle(e.target.value)}>
+                        </input>
+                    </div> :
+                    null
+                }
             </div>
         );
     }
 
     newNoteBtnClick = () => {
-        console.log('NEW BTN CLIKCED');
+        this.setState({ title: null, addingNote: !this.state.addingNote });
+    }
+
+    updateTitle = (txt) => {
+        console.log('HERE IT IS: ', txt);
     }
 }
 
