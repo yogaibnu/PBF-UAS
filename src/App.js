@@ -1,5 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
+import SidebarComponent from './sidebar/sidebar'
+import EditorComponent from './editor/editor'
 import './App.css';
 
 const firebase = require('firebase');
@@ -16,7 +18,12 @@ class App extends React.Component {
   }
 
   render() {
-    return(<div>Hello</div>)
+    return(
+      <div className="app-container">
+        <SidebarComponent></SidebarComponent>
+        <EditorComponent></EditorComponent>
+      </div>
+    )
   }
 
   componentDidMount = () => {
