@@ -77,8 +77,8 @@ class SiderbarComponent extends React.Component {
         console.log(this.state);
     }
 
-    selectNote = () => {
-        console.log('SELECT NOTE')
+    selectNote = (n, i) => {
+        this.props.selectNote(n, i);
     }
 
     deleteNote = () => {
