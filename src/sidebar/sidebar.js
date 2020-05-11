@@ -48,7 +48,7 @@ class SiderbarComponent extends React.Component {
     }
 
     updateTitle = (txt) => {
-        console.log('HERE IT IS: ', txt);
+        this.setState({ title: txt });
     }
 
     newNote = () => {
