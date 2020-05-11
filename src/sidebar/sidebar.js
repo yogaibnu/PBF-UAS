@@ -39,6 +39,24 @@ class SiderbarComponent extends React.Component {
                     </div> :
                     null
                 }
+                <List>
+                    {
+                        notes.map((_note, _index) => {
+                            return(
+                                <div key={_index}>
+                                    <SidebarItemComponent
+                                    _note={_note}
+                                    _index={_index}
+                                    selectedNoteIndex={selectedNoteIndex}
+                                    selectNote={this.selectNote}
+                                    deleteNote={this.deleteNote}
+                                    ></SidebarItemComponent>
+                                    <Divider></Divider>
+                                </div>
+                            )
+                        })
+                    }
+                </List>
             </div>
         );
     }
@@ -53,6 +71,14 @@ class SiderbarComponent extends React.Component {
 
     newNote = () => {
         console.log(this.state);
+    }
+
+    selectNote = () => {
+        console.log('SELECT NOTE')
+    }
+
+    deleteNote = () => {
+        console.log('DELETE NOTE')
     }
 }
 
