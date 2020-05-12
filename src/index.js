@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
+// import Login from './Login'
+import Main from './Main'
 import * as serviceWorker from './serviceWorker';
 
 const firebase = require('firebase');
@@ -21,7 +24,10 @@ firebase.initializeApp(
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Route exact path='/' component={Main} />
+      <Route path='/app' component={App} />
+    </Router>,
   </React.StrictMode>,
   document.getElementById('root')
 );
