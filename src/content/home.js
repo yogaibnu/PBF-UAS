@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import App from '../App'
-import { Route, NavLink, HashRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 
 class Home extends Component {
     render() {
