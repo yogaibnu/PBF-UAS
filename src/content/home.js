@@ -13,6 +13,7 @@ class Home extends Component {
                         <p>This web is designed for you who loved write anything. It's called e-notebook.</p>
                         <p>What are you waiting for?</p>
                         <p>Write anything you want!</p>
+                        <p>...</p>
                         <p>Design By: Yoga Ibnudinata</p>
                     </center>
                 </div>

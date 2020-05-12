@@ -27,6 +27,17 @@ const styles = theme => ({
         backgroundColor: '#88a2ce'
       }
     },
+    signOutBtn: {
+      width: '100%',
+      height: '35px',
+      borderBottom: '1px solid black',
+      borderRadius: '0px',
+      backgroundColor: '#800000',
+      color: 'white',
+      '&:hover': {
+        backgroundColor: '#cd5c5c'
+      }
+    },
     sidebarContainer: {
       marginTop: '0px',
       width: '300px',

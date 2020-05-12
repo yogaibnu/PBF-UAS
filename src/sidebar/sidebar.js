@@ -5,6 +5,8 @@ import List from '@material-ui/core/List'
 import { Divider, Button } from '@material-ui/core'
 import SidebarItemComponent from '../sidebaritem/sidebaritem'
 
+const firebase = require('firebase');
+
 class SiderbarComponent extends React.Component {
     constructor() {
         super();
@@ -20,6 +22,7 @@ class SiderbarComponent extends React.Component {
         if(notes) {
             return (
                 <div className={classes.sidebarContainer}>
+                    <Button className={classes.signOutBtn} onClick={() => firebase.auth().signOut()}>Sign out!</Button>
                     <Button
                         onClick={this.newNoteBtnClick}
                         className={classes.newNoteBtn}
