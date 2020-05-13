@@ -5,7 +5,6 @@ import './index.css';
 import App from './App';
 import Login from './login/Login'
 import Main from './Main'
-import Back from './backend/index'
 import * as serviceWorker from './serviceWorker';
 
 const firebase = require('firebase');
@@ -29,7 +28,6 @@ ReactDOM.render(
       <Route exact path='/' component={Main} />
       <Route path='/login' component={Login} />
       <Route path='/app' component={App} />
-      <Route path='/admin' component={Back} />
     </Router>,
   </React.StrictMode>,
   document.getElementById('root')
